@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class p307_CakeIngredients {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int counter = 0;
+
+        for (int i = 1; i <= 20; i++) {
+            String ingredients = scanner.nextLine();
+            if (ingredients.equals("Bake!")) {
+                System.out.printf("Preparing cake with %d ingredients.", counter);
+                return;
+            }
+            counter++;
+            System.out.printf("Adding ingredient %s.%n", ingredients);
+            if (counter == 20) {
+                System.out.printf("Preparing cake with %d ingredients.", counter);
+            }
+        }
+    }
+}
