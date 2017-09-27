@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class tf105_CharacterStats {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        int currentHealth = Integer.parseInt(scanner.nextLine());
+        int maximumtHealth = Integer.parseInt(scanner.nextLine());
+        int currentEnergy = Integer.parseInt(scanner.nextLine());
+        int maximumEnergy = Integer.parseInt(scanner.nextLine());
+
+        System.out.printf("Name: %s%n", name);
+        System.out.printf("Health: |%s%s|%nEnergy: |%s%s|",
+                repeatStr("|", currentHealth),
+                repeatStr(".", maximumtHealth - currentHealth),
+                repeatStr("|", currentEnergy),
+                repeatStr(".", maximumEnergy - currentEnergy));
+    }
+
+    public static String repeatStr(String strToRepeat, int count) {
+        String text = "";
+
+        for (int i = 0; i < count; i++) {
+            text = text + strToRepeat;
+        }
+        return text;
+
+    }
+}
