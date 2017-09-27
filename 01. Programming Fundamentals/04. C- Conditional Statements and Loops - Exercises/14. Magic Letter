@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class p314_MagicLetter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String first = scanner.nextLine();
+        String second = scanner.nextLine();
+        String third = scanner.nextLine();
+
+        char a = first.charAt(0);
+        char b = second.charAt(0);
+        char c = third.charAt(0);
+
+        for (char f = a; f <= b; f++) {
+            for (char g = a; g <= b; g++) {
+                for (char h = a; h <= b; h++) {
+                    if (f != c && g != c && h != c) {
+                        System.out.printf("%s%s%s ", f, g, h);
+                    }
+                }
+            }
+        }
+
+    }
+}
