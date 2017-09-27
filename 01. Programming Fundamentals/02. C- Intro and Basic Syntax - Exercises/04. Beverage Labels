@@ -1,0 +1,21 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class p104_BeverageLabels {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        int volume = Integer.parseInt(scanner.nextLine());
+        double energy = Double.parseDouble(scanner.nextLine());
+        double sugar = Double.parseDouble(scanner.nextLine());
+
+        double totalEnergy = (energy * volume) / 100;
+        double totalSugar = (sugar * volume) / 100;
+
+        DecimalFormat df = new DecimalFormat("#.##");
+
+
+
+        System.out.printf("%dml %s:%n%skcal, %sg sugars", volume, name, df.format(totalEnergy), df.format(totalSugar));
+    }
+}
