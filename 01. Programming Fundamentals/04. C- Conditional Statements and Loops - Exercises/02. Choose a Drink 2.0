@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class p301_ChooseADrink {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String profession = scanner.nextLine();
+        Double amount = Double.parseDouble(scanner.nextLine());
+
+        switch (profession) {
+            case "Athlete": System.out.printf("The Athlete has to pay %.2f.", amount * 0.7); break;
+            case "Businessman": System.out.printf("The Businessman has to pay %.2f.", amount * 1.00); break;
+            case "Businesswoman": System.out.printf("The Businesswoman has to pay %.2f.", amount * 1.00); break;
+            case "SoftUni Student": System.out.printf("The SoftUni Student has to pay %.2f.", amount * 1.70); break;
+            default: System.out.printf("The %s has to pay %.2f.", profession, amount * 1.20);
+        }
+    }
+}
