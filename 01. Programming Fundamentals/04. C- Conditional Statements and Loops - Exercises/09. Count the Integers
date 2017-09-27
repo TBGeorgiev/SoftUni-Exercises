@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class p309_CountTheIntegers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int counter = 0;
+
+        try {
+            for (int i = 1; i <= 100; i++) {
+                int n = Integer.parseInt(scanner.nextLine());
+                counter++;
+            }
+        }
+        catch (NumberFormatException String) {
+            System.out.println(counter);
+        }
+    }
+}
