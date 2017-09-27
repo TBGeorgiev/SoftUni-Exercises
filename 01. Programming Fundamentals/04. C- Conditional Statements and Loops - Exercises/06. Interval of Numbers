@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class p306_IntervalOfNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int first = Integer.parseInt(scanner.nextLine());
+        int second = Integer.parseInt(scanner.nextLine());
+
+        int first2 = first;
+        int second2 = second;
+
+        if (second < first) {
+            first2 = second;
+            second2 = first;
+        }
+        for (int i = first2; i <= second2; i++) {
+            System.out.println(i);
+        }
+    }
+}
