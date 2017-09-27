@@ -6,11 +6,8 @@ public class p205_ForeignLanguages {
         String language = scanner.nextLine();
 
         switch (language){
-            case "USA": System.out.println("English"); break;
-            case "England": System.out.println("English"); break;
-            case "Spain": System.out.println("Spanish"); break;
-            case "Argentina": System.out.println("Spanish"); break;
-            case "Mexico": System.out.println("Spanish"); break;
+            case "USA": case "England": System.out.println("English"); break; 
+            case "Spain": case "Argentina": case "Mexico": System.out.println("Spanish"); break;
             default: System.out.println("unknown"); break;
         }
     }
