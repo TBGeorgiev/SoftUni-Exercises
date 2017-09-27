@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class p303_ResurantDiscount {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int groupSize = Integer.parseInt(scanner.nextLine());
+        String packages = scanner.nextLine();
+
+        int price = 0;
+        double discount = 0;
+
+        switch (packages) {
+            case "Normal": price = 500; discount = 0.05; break;
+            case "Gold": price = 750; discount = 0.10; break;
+            case "Platinum": price = 1000; discount = 0.15; break;
+        }
+
+        if (groupSize <= 50) {
+            price += 2500;
+            System.out.printf("We can offer you the Small Hall%nThe price per person is %.2f$", (price - (price * discount))/ groupSize);
+        }
+        else if (groupSize > 51 && groupSize <= 100) {
+            price += 5000;
+            System.out.printf("We can offer you the Terrace%nThe price per person is %.2f$", (price - (price * discount))/ groupSize);
+        }
+        else if (groupSize > 100 && groupSize <= 120) {
+            price += 7500;
+            System.out.printf("We can offer you the Great Hall%nThe price per person is %.2f$", (price - (price * discount))/ groupSize);
+        }
+        else {
+            System.out.println("We do not have an appropriate hall.");
+        }
+    }
+}
