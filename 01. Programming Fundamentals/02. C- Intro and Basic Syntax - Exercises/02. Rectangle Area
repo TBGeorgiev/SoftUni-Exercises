@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class tf102_RectangleArea {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double first = Double.parseDouble(scanner.nextLine());
+        double second = Double.parseDouble(scanner.nextLine());
+        System.out.printf("%.2f", first * second);
+    }
+}
